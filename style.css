@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+body {
+    background-color: #ab8c8c;
+}
+
+a {
+    color: white;
+}
+.flex-class{
+    display: flex;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+.bg-light {
+    background-color: #ab2e35 !important;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(255 255 255);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255 255 255);
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-block: 3vh;
+    /* color: greenyellow; */
+}
+
+.navbar-brand {
+    display: inline-block;
+    margin-right: -10rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.img-fluid {
+    max-width: 17%;
+    border-radius: 50px;
+}
+
+/* CSS for Search Box */
+.search-box{
+    margin-top: 12px;
+    text-align: center;
+}
+
+.search-box input[type="text"]{
+    width: 71%;
+    height: 35px;
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 12vw;
+}
+
+#mic {
+    color: cyan;
+}
+
+
+#mic i {
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.voice-search-change {
+    color: greenyellow;
+    margin-left: 2px;
+}
+
+/* slide-bar  */
+#horizontal-slide-bar{
+    margin-block: 5px;
+    overflow-x: auto;
+    /* display: flex; */
+}
+
+.slide-bar-items {
+    border: 2px solid gray;
+    border-radius: 20px;
+    margin: 5px 2vw;
+    padding: 5px 2vw;
+    background: red;
+    color: white;
+    font-weight: bold;
+    box-shadow: inset;
+}
+
+.left,.right{
+    margin-block: 14px;
+    color: white;
+    height: fit-content;
+}
+.left:hover, .right:hover{
+    cursor: pointer;
+}
+.left{
+    margin-left: 8vw;
+    margin-right: 5px;
+}
+.right{
+    margin-right: 8vw;
+    margin-left: 5px;
+}
+
+#horizontal-slide-bar::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
+
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 14px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top: 74px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.songInfo {
+    /* position: absolute; */
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+/* CSS for Song Cards */
+.song-card {
+    margin-bottom: 20px;
+}
+
+.song-card img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding-block: 10px;
+    width: 200px;
+}
+
+.col-md-4 {
+    width: auto;
+}
+
+.row {
+    justify-content: center;
+}
+
+.card-title {
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.songlistplay {
+    display: flex;
+    justify-content: center;
+}
+
+.songItemPlay:hover {
+    cursor: pointer;
+}
+
+.audio-class {
+    width: 200px;
+    border-radius: 5px;
+    height: 36px;
+}
+
+ /* CSS for movie Cards */
+  .card-title-movie{
+    width: 200px;
+    height: 100px;
+    padding-top: 10px;
+  }
+  .card-title-movie p {
+    border: 2px solid black;
+    border-radius: 15px;
+    color: white;
+    font-size: 15px;
+    padding: 4px;
+    padding-left: 16px;
+  }
+
+  /* CSS for news cards */
+
+  .card-title-news{
+    width: 200px;
+    height: fit-content;
+    padding-top: 10px;
+    border: 3px solid black;
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    padding: 4px;
+    padding-left: 16px;
+  }
+.card-title-news:hover{
+    color: blue;
+}
+
+.news-card {
+    margin-bottom: 20px;
+}
+
+.news-card img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.news-card img:hover {
+   border: 2px solid blue;
+   opacity: 0.7;
+}

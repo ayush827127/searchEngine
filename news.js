@@ -1,4 +1,4 @@
-async function updateNewsTerm(term) {
+function updateNewsTerm(term) {
 
     var newsContainer = document.getElementById('news');
 
@@ -7,43 +7,44 @@ async function updateNewsTerm(term) {
         newsContainer.removeChild(newsContainer.firstChild);
     }
 
-    const response = await fetch(url);
-    const data = await response.json();
-
-    const results = data.articles;
-
-    results.map((result) => {
-
-
-        // Now create Html Element 
-        var divElement = document.createElement('div'),//
-            divElement2 = document.createElement('div'), //
-            divElement3 = document.createElement('div'),//
-            newsTitle = document.createElement('p'),
-            imageLink = document.createElement("a"),
-            img = document.createElement('img');
-
-        imageLink.target = "__blank";
-
-        divElement.className = 'col-md-4';
-        divElement2.className = 'news-card';
-        divElement3.className = 'card-body';
-        divElement3.className = 'flex';
-        newsTitle.className = 'card-title-news'
-
-        // Now put content 
-        img.src = result.urlToImage;
-        imageLink.href = result.url;
-        newsTitle.innerHTML = result.title;
+    fetch(url)
+        .then((Response) => Response.json())
+        .then((data) => {
+            const results = data.articles;
+            return results.map((result) => {
 
 
-        divElement.appendChild(divElement2);
-        imageLink.appendChild(img);
-        divElement2.appendChild(imageLink);
-        divElement2.appendChild(divElement3);
-        imageLink.appendChild(newsTitle);
-        newsContainer.appendChild(divElement);
+                // Now create Html Element 
+                var divElement = document.createElement('div'),//
+                    divElement2 = document.createElement('div'), //
+                    divElement3 = document.createElement('div'),//
+                    newsTitle = document.createElement('p'),
+                    imageLink = document.createElement("a"),
+                    img = document.createElement('img');
+
+                imageLink.target = "__blank";
+
+                divElement.className = 'col-md-4';
+                divElement2.className = 'news-card';
+                divElement3.className = 'card-body';
+                divElement3.className = 'flex';
+                newsTitle.className = 'card-title-news'
+
+                // Now put content 
+                img.src = result.urlToImage;
+                imageLink.href = result.url;
+                newsTitle.innerHTML = result.title;
 
 
-    })
+                divElement.appendChild(divElement2);
+                imageLink.appendChild(img);
+                divElement2.appendChild(imageLink);
+                divElement2.appendChild(divElement3);
+                imageLink.appendChild(newsTitle);
+                newsContainer.appendChild(divElement);
+
+
+            })
+        });
+
 }

@@ -45,6 +45,9 @@ function updateNewsTerm(term) {
 
 
             })
-        });
+        })
+        .catch(err => {
+            console.error("Somethig wrong "+err);
+        })
 
 }
